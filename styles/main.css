@@ -71,6 +71,7 @@ header {
     align-items: center;
     padding: 5px 20px;
     height: 100px;
+    justify-content: space-between;
 }
 
 .container-title {
@@ -79,4 +80,33 @@ header {
     font-size: 24px;
     font-weight: 400;
     line-height: 150%;
+}
+
+.currency-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.sub-container button {
+    height: 36px;
+    width: auto;
+    padding: 7px 5px;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    background-color: #ddddddbb;
+    font-family: "Chiron-GoRound";
+    color: #333333cc;
+    font-size: 14px;
+    font-weight: 450;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.sub-container button:hover {
+    background-color: #c7c7c7bb;
+}
+
+.sub-container button:active {
+    background-color: #bbbbbbbb;
+    transition: none;
 }
