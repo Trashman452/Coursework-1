@@ -60,6 +60,9 @@ header {
 .budget-list {
     grid-row: 19 / 35;
     grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .sub-container {
@@ -109,4 +112,68 @@ header {
 .sub-container button:active {
     background-color: #bbbbbbbb;
     transition: none;
+}
+
+.add-article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100% !important;
+    height: auto !important;
+    padding: 3px !important;
+}
+
+.add-article img {
+    opacity: 0.4;
+    width: 36px;
+    height: 36px;
+}
+
+.budget-list-footer {
+    height: 150px;
+    padding: 5px 20px;
+    border-top: 1px solid #bbb;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.budget-list-result {
+    font-family: "Chiron-GoRound";
+    font-size: 36px;
+    color: #333333cc;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+}
+
+.budget-list-footer button {
+    height: 56px;
+    width: auto;
+    padding: 15px 10px;
+    border: 1px solid #bbb;
+    border-radius: 20px;
+    background-color: #ddddddbb;
+    font-family: "Chiron-GoRound";
+    color: #333333cc;
+    font-size: 18px;
+    font-weight: 380;
+    letter-spacing: -0.01em;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.budget-list-footer button:hover {
+    background-color: #c7c7c7bb;
+}
+
+.budget-list-footer button:active {
+    background-color: #bbbbbbbb;
+    transition: none;
+}
+
+.add-article-form {
+    display: none;
 }

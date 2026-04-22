@@ -40,8 +40,27 @@
         <div class="container budget-list">
             <div class="sub-container">
                 <span class="container-title">Расчёт бюджета поездки</span>
-            </div>
+                <button class="add-article"><img src="/img/plus_120249.svg" alt="Добавить статью"></button>
 
+                <div class="add-article-form">
+                    <form action="" method="get">
+                        <p>
+                            <label for="article-name">Название статьи:
+                                <input type="text" name="article-name" id="article-name" required>
+                            </label>
+                        </p>
+                        <p>
+                            <label for="money-count">Сумма:
+                                <input type="number">
+                            </label>
+                        </p>
+                    </form>
+                </div>
+            </div>
+            <div class="budget-list-footer">
+                <span class="budget-list-result">Итого:</span>
+                <button>Расчитать бюджет</button>
+            </div>
         </div>
     </section>
     <script src="/script/script.js"></script>
