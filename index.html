@@ -40,21 +40,30 @@
         <div class="container budget-list">
             <div class="sub-container">
                 <span class="container-title">Расчёт бюджета поездки</span>
-                <button class="add-article"><img src="/img/plus_120249.svg" alt="Добавить статью"></button>
+                <button class="add-article" onclick="openForm()">
+                    <img src="/img/plus_120249.svg" alt="Добавить статью">
+                </button>
 
-                <div class="add-article-form">
-                    <form action="" method="get">
+                <div class="add-article-form" id="article-form">
+                    <form class="budget-form" action="" method="get">
                         <p>
-                            <label for="article-name">Название статьи:
-                                <input type="text" name="article-name" id="article-name" required>
-                            </label>
+                            <label for="article-name">Название статьи:</label>
+                            <input type="text" name="article-name" id="article-name" required>
                         </p>
-                        <p>
-                            <label for="money-count">Сумма:
-                                <input type="number">
-                            </label>
-                        </p>
+                        <label for="money-count">Сумма:</label>
+                        <div class="money-count-field-and-currency-selection">
+                            <input type="number" name="article-price" id="article-price" required>
+                            <select id="expenseCurrency">
+                                <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                                <option value="RUB">RUB</option>
+                            </select>
+                        </div>
+                        <button class="confirm-button">Добавить статью</button>
                     </form>
+                    <button class="close-form-button" onclick="closeForm()">
+                        <img src="/img/close_120246.svg" alt="Закрыть форму">
+                    </button>
                 </div>
             </div>
             <div class="budget-list-footer">
