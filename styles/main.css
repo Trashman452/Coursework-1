@@ -177,6 +177,7 @@ header {
 
 .add-article-form {
     display: flex;
+    flex-direction: column;
     visibility: hidden;
     opacity: 0;
     transform: translateX(80px);
@@ -184,14 +185,15 @@ header {
     justify-content: space-between;
     position: absolute;
     width: 450px;
-    height: 350px;
+    height: 330px;
     border: 1px solid #bbb;
     background-color: #fff;
     border-radius: 25px;
     box-shadow: -16px 16px 16px #bbb;
     right: 20px;
     top: 15px;
-    padding: 10px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .add-article-form.active {
@@ -200,13 +202,19 @@ header {
     transform: translateX(0);
 }
 
-.budget-form p {
+.budget-form div {
     display: flex;
     flex-direction: column;
+    height: auto;
+    width: auto;
+    gap: 10px;
 }
 
 .close-form-button {
     display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
     justify-content: center;
     align-items: center;
     border-radius: 100% !important;
@@ -218,4 +226,102 @@ header {
     opacity: 0.4;
     width: 36px;
     height: 36px;
+}
+
+.budget-form div label {
+    font-family: "Chiron-GoRound";
+    color: #333333cc;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.article-name-and-field input {
+    box-sizing: border-box;
+    outline: none;
+    width: 300px;
+    height: 40px;
+    border: 1px solid #bbb;
+    border-radius: 18px;
+    padding: 8px 16px;
+}
+
+.budget-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.form-button {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 5px;
+}
+
+.confirm-button {
+    height: 42px !important;
+    border-radius: 15px !important;
+    font-size: 18px !important;
+    padding: 7px 10px !important;
+    font-weight: 370 !important;
+    letter-spacing: -0.01em;
+}
+
+.money-count-field-and-currency-selection div {
+    display: flex;
+    flex-direction: row;
+}
+
+.money-count-field-and-currency-selection div input {
+    box-sizing: border-box;
+    outline: none;
+    width: 240px;
+    height: 40px;
+    border: 1px solid #bbb;
+    border-radius: 18px;
+    padding: 8px 16px;
+}
+
+.money-count-field-and-currency-selection div select {
+    box-sizing: border-box;
+    outline: none;
+    width: 50px;
+    height: 40px;
+    border: 1px solid #bbb;
+    border-radius: 18px;
+    appearance: none;
+    font-family: "Chiron-GoRound";
+    font-size: 13px;
+    padding-left: 3px;
+    background-image: url(/img/chevrondown_120139.svg);
+    background-position: right -3px center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    color: #333333cc;
+}
+
+.money-count-field-and-currency-selection div select:hover {
+    border-color: #999;
+}
+
+.money-count-field-and-currency-selection div input:hover,
+.money-count-field-and-currency-selection div input:focus {
+    border-color: #999;
+}
+
+.article-name-and-field input:hover,
+.article-name-and-field input:focus {
+    border-color: #999;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::placeholder {
+    font-family: "Chiron-GoRound";
+    font-size: 13px;
 }

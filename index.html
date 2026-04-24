@@ -45,25 +45,33 @@
                 </button>
 
                 <div class="add-article-form" id="article-form">
-                    <form class="budget-form" action="" method="get">
-                        <p>
-                            <label for="article-name">Название статьи:</label>
-                            <input type="text" name="article-name" id="article-name" required>
-                        </p>
-                        <label for="money-count">Сумма:</label>
-                        <div class="money-count-field-and-currency-selection">
-                            <input type="number" name="article-price" id="article-price" required>
-                            <select id="expenseCurrency">
-                                <option value="USD">USD</option>
-                                <option value="EUR">EUR</option>
-                                <option value="RUB">RUB</option>
-                            </select>
-                        </div>
-                        <button class="confirm-button">Добавить статью</button>
-                    </form>
                     <button class="close-form-button" onclick="closeForm()">
                         <img src="/img/close_120246.svg" alt="Закрыть форму">
                     </button>
+
+                    <form class="budget-form" id="budget-form" action="" method="get">
+                        <div class="article-name-and-field">
+                            <label for="article-name">Название статьи:</label>
+                            <input type="text" name="article-name" id="article-name" placeholder="Введите название"
+                                required>
+                        </div>
+                        <div class="money-count-field-and-currency-selection">
+                            <label for="money-count">Сумма:</label>
+                            <div>
+                                <input type="number" name="article-price" id="article-price" placeholder="Введите сумму"
+                                    required>
+                                <select id="expenseCurrency">
+                                    <option value="USD">USD</option>
+                                    <option value="EUR">EUR</option>
+                                    <option value="RUB">RUB</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="form-button">
+                        <button class="confirm-button" form="budget-form">Добавить статью</button>
+                    </div>
                 </div>
             </div>
             <div class="budget-list-footer">
