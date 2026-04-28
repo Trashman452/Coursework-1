@@ -18,14 +18,38 @@
                 <span class="container-title">Длина</span>
                 <button>Конвертировать</button>
             </div>
-
+            <div class="main-container">
+                <form class="length-form base-form-styles" id="length-form" action="" method="get">
+                    <div class="base-form-elements-styles">
+                        <label class="form-label" for="kilometers">Километры</label>
+                        <input class="main-container-form-input" type="number" name="kilometers" id="kilometers"
+                            value="0">
+                    </div>
+                    <div class="base-form-elements-styles">
+                        <label class="form-label" for="miles">Мили</label>
+                        <input class="main-container-form-input" type="number" name="miles" id="miles" value="0">
+                    </div>
+                </form>
+            </div>
         </div>
         <div class="container weight">
             <div class="sub-container">
                 <span class="container-title">Вес и масса</span>
                 <button>Конвертировать</button>
             </div>
-
+            <div class="main-container">
+                <form class="weight-form base-form-styles" id="weight-form" action="" method="get">
+                    <div class="base-form-elements-styles">
+                        <label class="form-label" for="kilograms">Килограммы</label>
+                        <input class="main-container-form-input" type="number" name="kilograms" id="kilograms"
+                            value="0">
+                    </div>
+                    <div class="base-form-elements-styles">
+                        <label class="form-label" for="pounds">Фунты</label>
+                        <input class="main-container-form-input" type="number" name="pounds" id="pounds" value="0">
+                    </div>
+                </form>
+            </div>
         </div>
         <div class="container currency">
             <div class="sub-container">
@@ -35,7 +59,37 @@
                     <button>Конвертировать</button>
                 </div>
             </div>
-
+            <div class="currency-calc-window">
+                <div class="main-container">
+                    <form class="currency-form base-form-styles" id="currency-form" action="" method="get">
+                        <div class="base-form-elements-styles currency-form-emelents">
+                            <label for="currency-first">
+                                <select class="currency-select" id="">
+                                    <option value="RUB">RUB</option>
+                                    <option value="USD">USD</option>
+                                    <option value="EUR">EUR</option>
+                                </select>
+                            </label>
+                            <input class="main-container-form-input" type="number" name="currency-first"
+                                id="currency-first" value="0">
+                        </div>
+                        <div class="base-form-elements-styles">
+                            <label for="currency-second">
+                                <select class="currency-select" id="">
+                                    <option value="USD">USD</option>
+                                    <option value="EUR">EUR</option>
+                                    <option value="RUB">RUB</option>
+                                </select>
+                            </label>
+                            <input class="main-container-form-input" type="number" name="currency-second"
+                                id="currency-second" value="0">
+                        </div>
+                    </form>
+                </div>
+                <div class="currency-course-place">
+                    <span class="courses-title">Курсы</span>
+                </div>
+            </div>
         </div>
         <div class="container budget-list">
             <div class="sub-container">
