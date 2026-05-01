@@ -16,7 +16,6 @@
         <div class="container distance">
             <div class="sub-container">
                 <span class="container-title">Длина</span>
-                <button>Конвертировать</button>
             </div>
             <div class="main-container">
                 <form class="length-form base-form-styles" id="length-form" action="" method="get">
@@ -35,7 +34,6 @@
         <div class="container weight">
             <div class="sub-container">
                 <span class="container-title">Вес и масса</span>
-                <button>Конвертировать</button>
             </div>
             <div class="main-container">
                 <form class="weight-form base-form-styles" id="weight-form" action="" method="get">
@@ -55,39 +53,43 @@
             <div class="sub-container">
                 <span class="container-title">Валюта</span>
                 <div class="currency-buttons">
-                    <button>Обновить курс</button>
-                    <button>Конвертировать</button>
+                    <button onclick="updateRates()">Обновить курс</button>
+                    <button onclick="convertCurrency()">Конвертировать</button>
                 </div>
             </div>
             <div class="currency-calc-window">
                 <div class="main-container">
-                    <form class="currency-form base-form-styles" id="currency-form" action="" method="get">
-                        <div class="base-form-elements-styles currency-form-emelents">
-                            <label for="currency-first">
-                                <select class="currency-select" id="">
-                                    <option value="RUB">RUB</option>
-                                    <option value="USD">USD</option>
-                                    <option value="EUR">EUR</option>
-                                </select>
-                            </label>
-                            <input class="main-container-form-input" type="number" name="currency-first"
-                                id="currency-first" value="0">
-                        </div>
-                        <div class="base-form-elements-styles">
-                            <label for="currency-second">
-                                <select class="currency-select" id="">
-                                    <option value="USD">USD</option>
-                                    <option value="EUR">EUR</option>
-                                    <option value="RUB">RUB</option>
-                                </select>
-                            </label>
-                            <input class="main-container-form-input" type="number" name="currency-second"
-                                id="currency-second" value="0">
-                        </div>
-                    </form>
+                    <div class="main-container-form">
+                        <form class="currency-form base-form-styles" id="currency-form" action="" method="get">
+                            <div class="base-form-elements-styles currency-form-emelents">
+                                <label class="currency-selectors" for="currency-first">
+                                    <select class="currency-select" id="fromCurrency">
+                                        <option value="RUB">RUB</option>
+                                        <option value="USD">USD</option>
+                                        <option value="EUR">EUR</option>
+                                    </select>
+                                    <img class="selectors-image" src="/img/arrowright_120128.svg" alt="Направление конвертации">
+                                    <select class="currency-select" id="toCurrency">
+                                        <option value="USD">USD</option>
+                                        <option value="EUR">EUR</option>
+                                        <option value="RUB">RUB</option>
+                                    </select>
+                                </label>
+                                <input class="main-container-form-input" type="number" name="currency-first"
+                                    id="currency-first" value="0">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="main-container-result">
+                        <span class="currency-calc-result-title">Итого:</span>
+                        <input class="currency-calc-result-input" type="text" id="currency-second" readonly>
+                    </div>
                 </div>
                 <div class="currency-course-place">
-                    <span class="courses-title">Курсы</span>
+                    <span class="courses-title">Курсы <span class="currency-update-time">(обновлены: <span id="lastUpdate"></span>)</span></span>
+                    <div class="courses-block" id="exchangeRates">
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -129,7 +131,7 @@
                 </div>
             </div>
             <div class="budget-list-footer">
-                <span class="budget-list-result">Итого:</span>
+                <span class="budget-list-result-title">Итого:</span>
                 <button>Расчитать бюджет</button>
             </div>
         </div>
